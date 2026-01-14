@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Songs Detail Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="C’Groovy Music — song details, description, and audio playback."
+    />
+    <title>Songs Detail | C’Groovy Music</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
     <header>
-  <a href="index.html" class="logo-btn"><h1>C’Groovy</h1></a>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="#">Pages</a>
-        <ul class="dropdown">
-          <li><a href="AboutUs.html">About Us</a></li>
-          <li><a href="Collection.html">Song Collection</a></li>
-          <li><a href="Detail.html">Songs Detail</a></li>
-          <li><a href="Register.html">Register</a></li>
+      <a href="index.html" class="logo-btn" aria-label="Go to Home">
+        <h1>C’Groovy</h1>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#" aria-haspopup="true" aria-expanded="false">Pages</a>
+            <ul class="dropdown">
+              <li><a href="AboutUs.html">About Us</a></li>
+              <li><a href="Collection.html">Song Collection</a></li>
+              <li>
+                <a href="Detail.html" aria-current="page">Songs Detail</a>
+              </li>
+              <li><a href="Register.html">Register</a></li>
+            </ul>
+          </li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-</header>
-    <div class="song-detail-container">
-    <div class="song-title" id="song-title">7 Years</div>
-    <div class="song-meta">
-      <strong>Artist:</strong> <span id="song-artist">Lukas Graham</span>
-    </div>
-    <div class="song-desc" id="song-desc">
-      <strong>Description:</strong> A reflective and soulful pop song that chronicles the journey of life from childhood to adulthood.
-    </div>
-    <div class="lyrics-title">Lyrics</div>
-    <div class="lyrics-box" id="song-lyrics">
-    </div>
-    <div class="audio-controls">
-      <button class="audio-btn" id="prev-btn" title="Previous">&#9198;</button>
-      <button class="audio-btn" id="play-btn" title="Play/Pause">&#9654;</button>
-      <div class="audio-progress">
-        <div class="audio-progress-bar" id="audio-progress-bar"></div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="song-detail-container">
+        <!-- These IDs are required by your merged Javascript/script.js -->
+        <div class="song-title" id="song-title">7 Years</div>
+
+        <div class="song-meta">
+          <strong>Artist:</strong> <span id="song-artist">Lukas Graham</span>
+        </div>
+
+        <div class="song-desc" id="song-desc">
+          <strong>Description:</strong>
+          A reflective and soulful pop song that chronicles the journey of life
+          from childhood to adulthood.
+        </div>
+
+        <div class="lyrics-section">
+          <h2>Lyrics</h2>
+
+          <!-- IMPORTANT: Do not paste full commercial lyrics unless you have rights/permission -->
+          <div class="lyrics-box" id="song-lyrics">
+            Lyrics will appear here (if you provide licensed/permitted text).
+          </div>
+        </div>
+
+        <div class="audio-controls" aria-label="Audio controls">
+          <button
+            class="audio-btn"
+            id="prev-btn"
+            type="button"
+            title="Previous"
+            aria-label="Previous track"
+          >
+            &#9198;
+          </button>
+
+          <button
+            class="audio-btn"
+            id="play-btn"
+            type="button"
+            title="Play/Pause"
+            aria-label="Play or pause"
+          >
+            &#9654;
+          </button>
+
+          <div
+            class="audio-progress"
+            role="progressbar"
+            aria-label="Playback progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="audio-progress-bar" id="audio-progress-bar"></div>
+          </div>
+
+          <button
+            class="audio-btn"
+            id="next-btn"
+            type="button"
+            title="Next"
+            aria-label="Next track"
+          >
+            &#9197;
+          </button>
+        </div>
+
+        <!-- Keep ONLY ONE audio element with this ID (duplicate IDs will break JS) -->
+        <audio
+          id="audio-player"
+          preload="metadata"
+          src="Asset/Song/7_Years.mp3"
+        ></audio>
       </div>
-      <button class="audio-btn" id="next-btn" title="Next">&#9197;</button>
-    </div>
-    <audio id="audio-player" src="Asset/Song/Lukas_Graham_7_Years.mp3" preload="none"></audio>
-  </div>
-  <footer>
-      &copy; 2025 C’Groovy Music. All rights reserved.
-  </footer>
-  <script src="Javascript/script.js"></script>
-</body>
+    </main>
 
+    <footer>&copy; 2025 C’Groovy Music. All rights reserved.</footer>
+
+    <!-- Your merged script is still named script.js -->
+    <script src="Javascript/script.js" defer></script>
+  </body>
 </html>
-
-
-
