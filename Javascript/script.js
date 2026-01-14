@@ -156,15 +156,13 @@
       return;
     }
 
-    // NOTE: Full song lyrics are not included here to avoid copyright issues.
-    // If you want lyrics in a private/local-only project, you can add them back.
     const songs = [
       {
         title: "7 Years",
         artist: "Lukas Graham",
         desc: "A reflective and soulful pop song that chronicles the journey of life from childhood to adulthood.",
         lyrics: "Lyrics unavailable in this demo.",
-        audio: "Asset/Song/Lukas_Graham_7_Years.mp3",
+        audio: "Asset/Song/7_Years.mp3",
       },
       {
         title: "Be Alright",
